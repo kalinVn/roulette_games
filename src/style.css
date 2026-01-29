@@ -1,0 +1,396 @@
+body {
+    display: block;
+    margin: 0px;
+}
+
+.container {
+  width:85%;
+  margin: auto;
+  flex-wrap: wrap;
+  height: 100vh;
+  --top-size: 20vh;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+.row-layout {
+    display: flex;
+    flex-wrap:wrap
+}
+
+/* ZERO COLUMN */
+.roulette-panel-top-left {
+  width: 16%;
+}
+
+.roulette-panel-top-left-result {
+  width: 100%;
+  height: 99%;
+  background: green;
+  color: white;
+  font-size: clamp(18px, 2vw, 28px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 90% 0 0 90%;s */
+  outline: 1px solid #333;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* NUMBERS COLUMN */
+.roulette-panel-grid {
+  width: 84%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* CELLS */
+.cell {
+  width: 7.5%;
+  cursor: pointer;
+  outline: 1px solid #999;
+  font-weight: bold;
+  font-size: clamp(12px, 1.3vw, 18px);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell-chips-col-conainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: -2%
+}
+
+.cell-chips-col {
+  width: 33%;
+  max-height: 80%;
+  overflow: hidden;
+  display: block;
+}
+
+.cell-chips-col-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 20%;
+    height: 20%;
+    overflow: hidden;
+}
+
+.cell-chips-col-1 img, .cell-chips-col-2 img, .cell-chips-col-3 img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cell-chips-col-1 p, .cell-chips-col-2 p, .cell-chips-col-3 p {
+  text-align: center;
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-top: 20%;
+}
+
+.cell-chips-col-1, .cell-chips-col-2, .cell-chips-col-3{
+  width: 33%;
+  display: block;
+  height: 100%;
+ 
+  overflow: hidden;
+  position: relative;
+}
+.color-black {
+  color: black;
+}
+.cell-chips-col-info-chips {
+    color: white;
+    position: absolute;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size: 10px;
+    display: block;
+    margin-top: 0px;
+    font-weight: bold;
+    bottom: 3px;
+    left: 4px;
+} 
+
+/* =====================
+   LEFT ACTION BUTTONS
+===================== */
+.roulete-panel-chips-btn {
+  width: 50%;
+  float: right;
+  margin-top: 5%;
+}
+
+
+.icon-btn {
+  width: 30%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.icon-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================
+   CHIP BUTTONS
+===================== */
+.roulete-panel-btn-controls {
+  float: left;
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  width: 50%;
+  margin-top: 5%;
+  /* padding-right: 2%;
+  gap: 5px; */
+}
+
+.chip-btn {
+  width: 14%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: black;
+   font-size: clamp(28px, 1.2vw, 29px);
+   font-weight: bold;
+}
+
+.chip-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================
+   INTERACTIONS
+===================== */
+.icon-btn:hover,
+.chip-btn:hover {
+  transform: scale(1.05);
+}
+
+.icon-btn:active,
+.chip-btn:active {
+  transform: scale(0.95);
+}
+
+.btn-undo, .btn-clear, .btn-x2 {
+  width: 48px;
+  height: 48px;
+}
+
+.chip-btn {
+  width: 82px;
+  height: 82px;
+}
+
+
+
+/* COLORS */
+.red { background: red;}
+.black { background: black;}
+
+/* DOZENS & BOTTOM */
+.offset {
+  margin-left: 8%;
+}
+
+.cell-grid-info {
+  width: 100%;
+  outline: 1px solid #999;
+  font-size: clamp(12px, 1.2vw, 16px);
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bet-2 {
+  width: 50%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.ml-10 { margin-left: 10%;}
+
+.w-30{width: 30%}
+.w-50pr {width: 50%}
+
+
+.h-50{height: 50%;}
+.h-100{height: 100px;}
+.h-50{height: 50px;}
+
+
+
+.roulette-panel {
+  height: 50%;
+}
+
+.roulete-panel-row-info {
+    width: 78.6%;
+    margin-left: 16%;
+}
+
+.roulete-panel-col-info {
+  width: 32%;
+  height: 50px;
+  flex-wrap: wrap;
+}
+
+.chip-disabled {
+  opacity: 0.60;
+}
+
+@media (max-width: 768px) {
+  .chip-btn {
+    margin-top: 10%;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+  }
+
+ 
+  .roulette-panel {
+    display: flex;
+    width: 45%;
+    flex-wrap: wrap;
+    height: 70%;
+   
+  }
+
+  /* ZERO ON TOP */
+  .roulette-panel-top-left{
+    width: 100%;
+    height: var(--top-size);
+  }
+
+ 
+
+  .roulette-panel-top-left-result {
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 0% 0%;
+    font-size: 24px;
+  }
+
+  .roulette-panel-grid {
+    width: 100%;
+    height: 84%;
+    order: 1;
+  }
+
+  /* EACH ROW = 3 NUMBERS */
+  .col-numbers .row {
+    flex-wrap: wrap;
+  }
+
+  .cell {
+    width: 33.33%;
+    height: 8%;
+    font-size: 14px;
+  }
+
+
+
+  .roulete-panel-row-info {
+    margin-top: var(--top-size);
+    width: 7%;
+    order:0;
+    flex-direction: column;
+    height: 70%;
+    margin-left: 0%;
+  }
+
+  .roulete-panel-col-info {
+    height: 26.5%;
+    width: 100%;
+    
+  }
+
+  .h-ml-27 {height: 27.6%;}
+  .order-ml-0 {order: 0}
+  .order-ml-1 {order: 1}
+  .order-ml-2 {order: 2}
+  .order-ml-3 {order: 3}
+  .order-ml-4 {order: 4}
+  .order-ml-5 {order: 5}
+  .ml-ml-2pr {margin-left: 2%}
+  .h-ml-30pr { width: 30%;}
+  .w-ml-10pr {width: 10%;}
+
+  .cell-grid-info {
+    writing-mode: vertical-rl;
+    transform: rotate(360deg);
+    font-size: 12px;
+  }
+
+
+  .roulete-panel-chips-btn {
+    display: block;
+    margin-top: var(--top-size);
+    width: 30%;
+    height: 70%;
+  }
+
+  .icon-btn img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* CHIPS ON RIGHT */
+  .roulete-panel-btn-controls {
+    display: flex;
+   
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    margin-top: -30%;
+    margin-left: 5%;
+  }
+
+  .chip-btn {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+    .ml-5 { margin-left: 5%;}
+    .ml-3 { margin-left: 3%;}
+    .ml-2p {margin-left: 2px;}
+
+  .w-m-100pr{width: 100%}
+  .h-ml-50pr{width: 100%}
+
+}
